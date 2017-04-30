@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>网页meta的好奇分析 | Mr xu&#39;s blog | 这是我学习前端的笔记与踩过的坑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="html">
+    <meta name="description" content="网页中的关于的分析在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&amp;lt; meta&amp;gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&amp;lt; meta&amp;gt;  元数据（metadata）是关于数据的信息。  标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。典型的情况是，meta 元素被用于规定页面的描述、关键词、文">
+<meta name="keywords" content="html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页meta的好奇分析">
+<meta property="og:url" content="https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/index.html">
+<meta property="og:site_name" content="Mr xu's blog">
+<meta property="og:description" content="网页中的关于的分析在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&amp;lt; meta&amp;gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&amp;lt; meta&amp;gt;  元数据（metadata）是关于数据的信息。  标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。典型的情况是，meta 元素被用于规定页面的描述、关键词、文">
+<meta property="og:image" content="http://i1.piimg.com/567571/5039d2166989cf06.png">
+<meta property="og:updated_time" content="2017-04-19T15:30:15.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页meta的好奇分析">
+<meta name="twitter:description" content="网页中的关于的分析在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&amp;lt; meta&amp;gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&amp;lt; meta&amp;gt;  元数据（metadata）是关于数据的信息。  标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。典型的情况是，meta 元素被用于规定页面的描述、关键词、文">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/5039d2166989cf06.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">eif</h5>
+          <a href="mailto:eifxmq@gmail.com" title="eifxmq@gmail.com" class="mail">eifxmq@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/eif-xu" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">网页meta的好奇分析</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">网页meta的好奇分析</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-19T12:54:45.083Z" itemprop="datePublished" class="page-time">
+  2017-04-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#网页中的关于的分析"><span class="post-toc-number">1.</span> <span class="post-toc-text">网页中的关于的分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（1）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">截图分析（1）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（2）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">截图分析（2）</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-网页meta的好奇分析"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">网页meta的好奇分析</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-19 20:54:45" datetime="2017-04-19T12:54:45.083Z"  itemprop="datePublished">2017-04-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="网页中的关于的分析"><a href="#网页中的关于的分析" class="headerlink" title="网页中的关于的分析"></a>网页中的关于<meta>的分析</h1><p>在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&lt; meta&gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&lt; meta&gt;</p>
+<blockquote>
+<p>元数据（metadata）是关于数据的信息。</p>
+<p><meta> 标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。<br>典型的情况是，meta 元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。—–<a href="http://www.w3school.com.cn/tags/tag_meta.asp" target="_blank" rel="external">w3s</a></p>
+</blockquote>
+<p>上面是w3c对于meta的定义，我又开始对其，如何进行使用进行归纳与查找。</p>
+<h2 id="截图分析（1）"><a href="#截图分析（1）" class="headerlink" title="截图分析（1）"></a>截图分析（1）</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i1.piimg.com/567571/5039d2166989cf06.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>解析文件格式符</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>使用最高版本的浏览器</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>屏幕像素等于实际的像素</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>忽略手机设备将number识别为手机号码</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网站开启对web app的使用</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"百度, 百度前端, 百度前端学院, 百度前端技术学院, 前端, 前端开发, web前端, 前端开发工程师, CSS, JavaScript, HTML, Web标准"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>写给百度蜘蛛</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"百度前端技术学院是面向大学生的前端技术学习平台，由百度创办的免费前端技术学习实践、交流、分享平台"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网页内容描述</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">href</span>=<span class="string">"//ife.baidu.com/2017/asset/common/img/favicon_24c70cf.ico"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"//ife.baidu.com/2017/asset/common/img/favicon_24c70cf.ico"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"bookmark"</span> <span class="attr">href</span>=<span class="string">"//ife.baidu.com/2017/asset/common/img/favicon_24c70cf.ico"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>百度前端技术学院<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"//ife.baidu.com/2017/asset/home/index_80febf1.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//hm.baidu.com/hm.js?d422e3cabaaaa7445e54622b97472bab"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>引用各种资源</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">		var _hmt = _hmt || [];</div><div class="line">		(function() &#123;</div><div class="line">			var hm = document.createElement("script");</div><div class="line">			hm.src = "//hm.baidu.com/hm.js?d422e3cabaaaa7445e54622b97472bab";</div><div class="line">			var s = document.getElementsByTagName("script")[0];</div><div class="line">			s.parentNode.insertBefore(hm, s);</div><div class="line">		&#125;)();</div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>大概是百度统计的检测代码</p>
+<h2 id="截图分析（2）"><a href="#截图分析（2）" class="headerlink" title="截图分析（2）"></a>截图分析（2）</h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-19T15:30:15.724Z" itemprop="dateUpdated">2017-04-19 23:30:15</time>
+</span><br>
+
+
+        本文属于eif原创，转载请加上出处：<a href="/2017/04/19/网页meta的好奇分析/" target="_blank" rel="external">https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/</a>
+    </div>
+    <footer>
+        <a href="https://eif-xu.github.io">
+            <img src="/img/avatar.jpg" alt="eif">
+            eif
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&title=《网页meta的好奇分析》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&title=《网页meta的好奇分析》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网页meta的好奇分析》 — Mr xu's blog&url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/16/hello-world/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/21/关于for-in与for-var-i-的使用/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">关于for...in与for(;;;)的使用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>eif &copy; 2016 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&title=《网页meta的好奇分析》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&title=《网页meta的好奇分析》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网页meta的好奇分析》 — Mr xu's blog&url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://eif-xu.github.io/2017/04/19/网页meta的好奇分析/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
