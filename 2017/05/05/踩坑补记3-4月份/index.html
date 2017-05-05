@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>踩坑补记3,4月份 | Mr xu&#39;s blog | 这是我学习前端的笔记与踩过的坑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="bug">
+    <meta name="description" content="踩坑补记 3&amp;amp;&amp;amp;4月份路径错误这种错误，我真是服了，一点用都没有，但是确实是我犯过的最多的错误。  sublime 将已经用sublime打开的文件进行移动操作，之后进行ctrl+s操作会再原位置生成新的文件，我真真是不想继续写这一惨案了，事后进行反思觉着，书上得来终觉浅，觉知此事要躬行，这话实在是太对了 奇葩的相对路径，在写百度前端学院的课的时候有一个比较简单的切页面的任务，但是">
+<meta name="keywords" content="bug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="踩坑补记3,4月份">
+<meta property="og:url" content="https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/index.html">
+<meta property="og:site_name" content="Mr xu's blog">
+<meta property="og:description" content="踩坑补记 3&amp;amp;&amp;amp;4月份路径错误这种错误，我真是服了，一点用都没有，但是确实是我犯过的最多的错误。  sublime 将已经用sublime打开的文件进行移动操作，之后进行ctrl+s操作会再原位置生成新的文件，我真真是不想继续写这一惨案了，事后进行反思觉着，书上得来终觉浅，觉知此事要躬行，这话实在是太对了 奇葩的相对路径，在写百度前端学院的课的时候有一个比较简单的切页面的任务，但是">
+<meta property="og:updated_time" content="2017-05-05T15:06:23.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="踩坑补记3,4月份">
+<meta name="twitter:description" content="踩坑补记 3&amp;amp;&amp;amp;4月份路径错误这种错误，我真是服了，一点用都没有，但是确实是我犯过的最多的错误。  sublime 将已经用sublime打开的文件进行移动操作，之后进行ctrl+s操作会再原位置生成新的文件，我真真是不想继续写这一惨案了，事后进行反思觉着，书上得来终觉浅，觉知此事要躬行，这话实在是太对了 奇葩的相对路径，在写百度前端学院的课的时候有一个比较简单的切页面的任务，但是">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">eif</h5>
+          <a href="mailto:eifxmq@gmail.com" title="eifxmq@gmail.com" class="mail">eifxmq@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/eif-xu" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">踩坑补记3,4月份</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">踩坑补记3,4月份</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-05T15:02:49.000Z" itemprop="datePublished" class="page-time">
+  2017-05-05
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#踩坑补记-3-amp-amp-4月份"><span class="post-toc-number">1.</span> <span class="post-toc-text">踩坑补记 3&&4月份</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#路径错误"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">路径错误</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#for循环关于-lt-的循环次数问题"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">for循环关于<=的循环次数问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#问题出在i-lt-len，因为i是从0开始计数，假设i-6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">问题出在i<=len，因为i是从0开始计数，假设i=6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量作用域"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">变量作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输出的不是0而是undefined-因为局部变量将父元素进行覆盖了。"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">输出的不是0而是undefined,因为局部变量将父元素进行覆盖了。</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-踩坑补记3-4月份"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">踩坑补记3,4月份</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-05 23:02:49" datetime="2017-05-05T15:02:49.000Z"  itemprop="datePublished">2017-05-05</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="踩坑补记-3-amp-amp-4月份"><a href="#踩坑补记-3-amp-amp-4月份" class="headerlink" title="踩坑补记 3&amp;&amp;4月份"></a>踩坑补记 3&amp;&amp;4月份</h1><h2 id="路径错误"><a href="#路径错误" class="headerlink" title="路径错误"></a>路径错误</h2><p>这种错误，我真是服了，一点用都没有，但是确实是我犯过的最多的错误。</p>
+<ol>
+<li>sublime 将已经用sublime打开的文件进行移动操作，之后进行ctrl+s操作会再原位置生成新的文件，我真真是不想继续写这一惨案了，事后进行反思觉着，书上得来终觉浅，觉知此事要躬行，这话实在是太对了</li>
+<li>奇葩的相对路径，在写百度前端学院的课的时候有一个比较简单的切页面的任务，但是在写的时候，我使用了flex布局结合雪碧图进行实现，但是不知道为啥，我居然在检查雪碧图的地址的时候觉着我写的相对路径是ok的，没显示出来。脑洞大开的，琢磨是不是flex与background-img元素元素互相冲突，导致失效，然后开始写page进行验证，但是神奇的居然没有问题，更可气的是，我居然没看出上个页面失效的原因，脑洞贼大，第二天，再看昨天的代码，一下子就发现解决了，我擦。</li>
+</ol>
+<h2 id="for循环关于-lt-的循环次数问题"><a href="#for循环关于-lt-的循环次数问题" class="headerlink" title="for循环关于&lt;=的循环次数问题"></a>for循环关于&lt;=的循环次数问题</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">for (var i=0;i<span class="tag">&lt;<span class="name">=len;i++)&#123;</span></span></div><div class="line">		<span class="attr">if</span> (<span class="attr">apiDate</span>[<span class="attr">i</span>][<span class="attr">1</span>]&gt;60)&#123;</div><div class="line">			box.push('<span class="tag">&lt;<span class="name">li</span>&gt;</span>',[apiDate[i][0],apiDate[i][1]],'<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	var lg=box.length;</div></pre></td></tr></table></figure>
+<p>这里直接进行报错，解析器居然告诉我，i未定义。。。真是被这个报错给弄迷糊了</p>
+<h3 id="问题出在i-lt-len，因为i是从0开始计数，假设i-6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。"><a href="#问题出在i-lt-len，因为i是从0开始计数，假设i-6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。" class="headerlink" title="问题出在i&lt;=len，因为i是从0开始计数，假设i=6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。"></a>问题出在i&lt;=len，因为i是从0开始计数，假设i=6，那么实际上就是循环了7次，但是i一共就只有6个数，所以最后一次循环失败，直接报错。</h3><h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><p>循环一定注意变量的设置，防止保存参数初始化，es6中如果使用let的话注意与var的不同，作用域，不可以跨域调用，子域与父域发生重叠，这时子域将覆盖父域。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x = 0;</div><div class="line">function fun()&#123;</div><div class="line">    console.log(x);</div><div class="line">    var x = 1;</div><div class="line">    x++;</div><div class="line">&#125;</div><div class="line">fun();</div></pre></td></tr></table></figure></p>
+<h3 id="输出的不是0而是undefined-因为局部变量将父元素进行覆盖了。"><a href="#输出的不是0而是undefined-因为局部变量将父元素进行覆盖了。" class="headerlink" title="输出的不是0而是undefined,因为局部变量将父元素进行覆盖了。"></a>输出的不是0而是undefined,因为局部变量将父元素进行覆盖了。</h3>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-05T15:06:23.191Z" itemprop="dateUpdated">2017-05-05 23:06:23</time>
+</span><br>
+
+
+        本文属于eif原创，转载请加上出处：<a href="/2017/05/05/踩坑补记3-4月份/" target="_blank" rel="external">https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/</a>
+    </div>
+    <footer>
+        <a href="https://eif-xu.github.io">
+            <img src="/img/avatar.jpg" alt="eif">
+            eif
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&title=《踩坑补记3,4月份》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&title=《踩坑补记3,4月份》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《踩坑补记3,4月份》 — Mr xu's blog&url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/21/关于for-in与for-var-i-的使用/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">关于for...in与for(;;;)的使用</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>eif &copy; 2016 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&title=《踩坑补记3,4月份》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&title=《踩坑补记3,4月份》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《踩坑补记3,4月份》 — Mr xu's blog&url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://eif-xu.github.io/2017/05/05/踩坑补记3-4月份/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
