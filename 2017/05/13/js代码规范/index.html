@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>js代码规范 | Mr xu&#39;s blog | 这是我学习前端的笔记与踩过的坑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="js,规范">
+    <meta name="description" content="命名的规范 命名具有描述性  进行驼峰式命名对象，函数，实例  构造函数首字母进行大写  私有属性已下划线进行命名  使用self保存this的引用 123456function () &amp;#123;      var self = this;      return function () &amp;#123;          console.log(self);      &amp;#125;;  &amp;#125">
+<meta name="keywords" content="js,规范">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js代码规范">
+<meta property="og:url" content="https://eif-xu.github.io/2017/05/13/js代码规范/index.html">
+<meta property="og:site_name" content="Mr xu's blog">
+<meta property="og:description" content="命名的规范 命名具有描述性  进行驼峰式命名对象，函数，实例  构造函数首字母进行大写  私有属性已下划线进行命名  使用self保存this的引用 123456function () &amp;#123;      var self = this;      return function () &amp;#123;          console.log(self);      &amp;#125;;  &amp;#125">
+<meta property="og:updated_time" content="2017-05-13T16:00:19.416Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js代码规范">
+<meta name="twitter:description" content="命名的规范 命名具有描述性  进行驼峰式命名对象，函数，实例  构造函数首字母进行大写  私有属性已下划线进行命名  使用self保存this的引用 123456function () &amp;#123;      var self = this;      return function () &amp;#123;          console.log(self);      &amp;#125;;  &amp;#125">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">eif</h5>
+          <a href="mailto:eifxmq@gmail.com" title="eifxmq@gmail.com" class="mail">eifxmq@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/eif-xu" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">js代码规范</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">js代码规范</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-13T15:56:46.000Z" itemprop="datePublished" class="page-time">
+  2017-05-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命名的规范"><span class="post-toc-number">1.</span> <span class="post-toc-text">命名的规范</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#变量"><span class="post-toc-number">2.</span> <span class="post-toc-text">变量</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象"><span class="post-toc-number">3.</span> <span class="post-toc-text">对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数组"><span class="post-toc-number">4.</span> <span class="post-toc-text">数组</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#字符串"><span class="post-toc-number">5.</span> <span class="post-toc-text">字符串</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#函数"><span class="post-toc-number">6.</span> <span class="post-toc-text">函数</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#比较符号"><span class="post-toc-number">7.</span> <span class="post-toc-text">比较符号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#注释"><span class="post-toc-number">8.</span> <span class="post-toc-text">注释</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-FIXME-进行声明问题"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">使用//FIXME: 进行声明问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-TODO-声明所需实现"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">使用//TODO: 声明所需实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#空格"><span class="post-toc-number">9.</span> <span class="post-toc-text">空格</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分号"><span class="post-toc-number">10.</span> <span class="post-toc-text">分号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#强制转换"><span class="post-toc-number">11.</span> <span class="post-toc-text">强制转换</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-js代码规范"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">js代码规范</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-13 23:56:46" datetime="2017-05-13T15:56:46.000Z"  itemprop="datePublished">2017-05-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="命名的规范"><a href="#命名的规范" class="headerlink" title="命名的规范"></a>命名的规范</h1><ol>
+<li><p>命名具有描述性</p>
+</li>
+<li><p>进行驼峰式命名对象，函数，实例</p>
+</li>
+<li><p>构造函数首字母进行大写</p>
+</li>
+<li><p>私有属性已下划线进行命名</p>
+</li>
+<li><p>使用self保存this的引用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function () &#123;</div><div class="line">      var self = this;</div><div class="line">      return function () &#123;</div><div class="line">          console.log(self);</div><div class="line">      &#125;;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>尽量命名函数</p>
+</li>
+</ol>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><ol>
+<li><p>使用var(关键字)进行声明变量</p>
+</li>
+<li><p>对于每个变量进行单独声明，不要一次声明过多</p>
+</li>
+<li><p>在赋值很多变量的时候，要将未赋值的变量，放在后面</p>
+</li>
+<li><p>在作用域的顶部进行函数的声明</p>
+</li>
+</ol>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><ol>
+<li><p>使用字面量方式创造对象</p>
+</li>
+<li><p>禁止使用保留字作为对象的属性</p>
+</li>
+<li><p>用.号访问对象属性不要用[]</p>
+</li>
+</ol>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li><p>使用字面量创建数组</p>
+</li>
+<li><p>使用slice()进行复制数组</p>
+</li>
+<li><p>使用slice方法将数组对象转化成数组</p>
+</li>
+</ol>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ol>
+<li><p>字符串使用’’</p>
+</li>
+<li><p>长字符应该用+连接多个短字符串进行连接</p>
+</li>
+<li><p>用编程创造的字符串，应该使用json</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function inbox(messages) &#123;</div><div class="line">       items = [];</div><div class="line"></div><div class="line">       for (i = 0; i &lt; length; i++) &#123;</div><div class="line">           // use direct assignment in this case because we're micro-optimizing.</div><div class="line">           items[i] = '&lt;li&gt;' + messages[i].message + '&lt;/li&gt;';</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       return '&lt;ul&gt;' + items.join('') + '&lt;/ul&gt;';</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>不要在非函数块中使用函数声明，可以使用字面量的形式</p>
+<p>#代码块</p>
+<p>所有的多行的代码块使用花括号</p>
+<h1 id="比较符号"><a href="#比较符号" class="headerlink" title="比较符号"></a>比较符号</h1><p>===  !==  多使用这两种</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>多行注释使用 /<em>*…</em>/</p>
+<h2 id="使用-FIXME-进行声明问题"><a href="#使用-FIXME-进行声明问题" class="headerlink" title="使用//FIXME: 进行声明问题"></a>使用//FIXME: 进行声明问题</h2><h2 id="使用-TODO-声明所需实现"><a href="#使用-TODO-声明所需实现" class="headerlink" title="使用//TODO: 声明所需实现"></a>使用//TODO: 声明所需实现</h2><h1 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h1><ol>
+<li><p>花括号前加一个空格</p>
+</li>
+<li><p>在包含条件表达式的空格前面加一个空格</p>
+</li>
+<li><p>包含函数参数列表的括号前面不加空格</p>
+</li>
+<li><p>运算符前后不加空格</p>
+</li>
+<li><p>在文件末尾加单一分行符 </p>
+</li>
+<li><p>在代码块与下一代码之间留一行空格</p>
+</li>
+</ol>
+<h1 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h1><ol>
+<li><p>自执行函数前后加分号  //匿名函数 </p>
+</li>
+<li><p>每条代码后加分号   //尤大说其实不必要</p>
+</li>
+</ol>
+<h1 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h1><p>将强制转换放在代码语句前面</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-13T16:00:19.416Z" itemprop="dateUpdated">2017-05-14 00:00:19</time>
+</span><br>
+
+
+        本文属于eif原创，转载请加上出处：<a href="/2017/05/13/js代码规范/" target="_blank" rel="external">https://eif-xu.github.io/2017/05/13/js代码规范/</a>
+    </div>
+    <footer>
+        <a href="https://eif-xu.github.io">
+            <img src="/img/avatar.jpg" alt="eif">
+            eif
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/规范/">规范</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/05/13/js代码规范/&title=《js代码规范》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/05/13/js代码规范/&title=《js代码规范》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/05/13/js代码规范/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js代码规范》 — Mr xu's blog&url=https://eif-xu.github.io/2017/05/13/js代码规范/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/05/13/js代码规范/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/05/05/踩坑补记3-4月份/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">踩坑补记3,4月份</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>eif &copy; 2016 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://eif-xu.github.io/2017/05/13/js代码规范/&title=《js代码规范》 — Mr xu's blog&pic=https://eif-xu.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://eif-xu.github.io/2017/05/13/js代码规范/&title=《js代码规范》 — Mr xu's blog&source=blog note" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://eif-xu.github.io/2017/05/13/js代码规范/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js代码规范》 — Mr xu's blog&url=https://eif-xu.github.io/2017/05/13/js代码规范/&via=https://eif-xu.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://eif-xu.github.io/2017/05/13/js代码规范/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://eif-xu.github.io/2017/05/13/js代码规范/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
