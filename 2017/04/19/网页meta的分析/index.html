@@ -28,7 +28,8 @@
 <meta property="og:site_name" content="Mr xu's blog">
 <meta property="og:description" content="网页中的关于的分析在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&amp;lt; meta&amp;gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&amp;lt; meta&amp;gt;  元数据（metadata）是关于数据的信息。  标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。典型的情况是，meta 元素被用于规定页面的描述、关键词、文">
 <meta property="og:image" content="http://i1.piimg.com/567571/5039d2166989cf06.png">
-<meta property="og:updated_time" content="2017-05-13T16:08:45.934Z">
+<meta property="og:image" content="http://i1.piimg.com/588926/97ae56e3280a0c58.png">
+<meta property="og:updated_time" content="2017-05-14T16:32:54.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网页meta的分析">
 <meta name="twitter:description" content="网页中的关于的分析在参加百度前端学院的时候出于好奇，看了一下百度的页面的源码，关于标签&amp;lt; meta&amp;gt;引起了我的注意，他们写的跟我做练习时不一样啊！摔！我又得重新学习了&amp;lt; meta&amp;gt;  元数据（metadata）是关于数据的信息。  标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。典型的情况是，meta 元素被用于规定页面的描述、关键词、文">
@@ -152,7 +153,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#网页中的关于的分析"><span class="post-toc-number">1.</span> <span class="post-toc-text">网页中的关于的分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（1）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">截图分析（1）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（2）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">截图分析（2）</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#网页中的关于的分析"><span class="post-toc-number">1.</span> <span class="post-toc-text">网页中的关于的分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（1）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">截图分析（1）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截图分析（2）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">截图分析（2）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结分析小米网的head"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">总结分析小米网的head</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -216,14 +217,50 @@
 <hr>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">		var _hmt = _hmt || [];</div><div class="line">		(function() &#123;</div><div class="line">			var hm = document.createElement("script");</div><div class="line">			hm.src = "//hm.baidu.com/hm.js?d422e3cabaaaa7445e54622b97472bab";</div><div class="line">			var s = document.getElementsByTagName("script")[0];</div><div class="line">			s.parentNode.insertBefore(hm, s);</div><div class="line">		&#125;)();</div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>大概是百度统计的检测代码</p>
-<h2 id="截图分析（2）"><a href="#截图分析（2）" class="headerlink" title="截图分析（2）"></a>截图分析（2）</h2>
+<h2 id="截图分析（2）"><a href="#截图分析（2）" class="headerlink" title="截图分析（2）"></a>截图分析（2）</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i1.piimg.com/588926/97ae56e3280a0c58.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=Edge"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>使用高版本浏览器</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网页解码格式</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>小米商城 - 小米6、红米Note、小米5c、小米笔记本官方网站<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网页题目</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"小米商城直营小米公司旗下直营"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网页内容描述</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"小米6、红米Note、小米5c"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>网页头部标记写给网络爬虫</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Veiwport"</span> <span class="attr">content</span>=<span class="string">"width=1226"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>标记给浏览器表示视窗的宽度1226px</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"search"</span> <span class="attr">title</span>=<span class="string">"mi.com"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>各种资源的请求</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-transform"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-siteapp"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>此标记会添加在网络的请求的头部</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">tel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>为页面添加样式表</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line">	var _head_over_time= (new Date()).getTime();</div><div class="line">	//获取日期的毫秒数</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="总结分析小米网的head"><a href="#总结分析小米网的head" class="headerlink" title="总结分析小米网的head"></a>总结分析小米网的head</h3><p> 总体的标签比较简单我推测应该是用js动态生成，特别是视图宽度，看看能不能解开压缩混淆看看是不是使用了js进行判断视图的大小，然后使用媒体查询进行渲染页面的css</p>
+
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-05-13T16:08:45.934Z" itemprop="dateUpdated">2017-05-14 00:08:45</time>
+    最后更新时间：<time datetime="2017-05-14T16:32:54.158Z" itemprop="dateUpdated">2017-05-15 00:32:54</time>
 </span><br>
 
 
